@@ -99,16 +99,64 @@ public static void Exercicio2()
         }
         public static void Exercicio3()
         {
+            float soma = 0, media = 0;
+            int n;
+
+
+            Console.WriteLine("Digite o tamanho do vetor:");
+             n = int.Parse(Console.ReadLine());
+            float[] vet = new float[n];
+            Random random = new Random();
+
+
+            for (int i = 0; i < n; i++)
+            {
+                vet[i] = random.Next(1, 10); 
+                soma += vet[i];
+            }
+
+
+            media = soma / n;
+            Console.WriteLine("media: " + media);
+
+
+            for (int i = 0; i < n; i++)
+            {
+
+
+                if (vet[i] >= media)
+                    Console.WriteLine("numero maior ou igual a media vetor [{0}]={1}", i, vet[i]);
+            }
 
         }
         public static void Exercicio4()
         {
+            Console.WriteLine("Qual o tamanho do vetor?");
+            int n = int.Parse(Console.ReadLine());
+            string[] vet = new string[n];
+
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Digite os nomes:");
+                vet[i] = Console.ReadLine();
+
+            }
+
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("vetor[{0}]={1}", i, vet[i]);
+            }
+
+
+            for (int i = n - 1; i >= 0; i--)
+            {
+                Console.WriteLine("vetor[{0}]={1}", i, vet[i]);
+            }
 
         }
-        public static void Exercicio5()
-        {
-
-        }
+       
         static void Main(string[] args)
         {
             int exercicio;
@@ -119,7 +167,7 @@ public static void Exercicio2()
                 Console.WriteLine("exercicio 2 - Digite2");
                 Console.WriteLine("exercicio 3 - Digite3");
                 Console.WriteLine("exercicio 4 - Digite4");
-                Console.WriteLine("exercicio 5 - Digite5");
+                
                 Console.WriteLine("Digite 0 - caso queira sair:");
 
                 exercicio = int.Parse(Console.ReadLine());
@@ -141,9 +189,7 @@ public static void Exercicio2()
                     case 4:
                         Exercicio4();
                         break;
-                    case 5:
-                        Exercicio5();
-                        break;
+                    
                         
 
 
