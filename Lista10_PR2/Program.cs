@@ -141,7 +141,7 @@ public static void Exercicio2()
                     case 4:
                         Exercicio4();
                         break;
-                    case 4:
+                    case 5:
                         Exercicio5();
                         break;
                         
